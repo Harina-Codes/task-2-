@@ -1,0 +1,23 @@
+{
+  "name": "harina-task-2",
+  "version": "1.0.0",
+  "description": "Recreation of Task 1 pages using Vite and Nunjucks.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vite",
+    "nunjucks",
+    "bootstrap"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nunjucks": "^3.2.4",
+    "vite": "^5.2.0",
+    "vite-plugin-nunjucks": "^0.0.12" 
+  }
+}
