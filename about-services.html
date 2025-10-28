@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harina | About & Services</title>
+    <!-- 
+        MANDATORY Bootstrap 5 CDN Link (CSS)
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    
+    <!-- Custom CSS for consistency with index.html -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; 
+            color: #343a40;
+        }
+        .navbar-dark {
+            background-color: #1a1a2e !important; 
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1200x500/1a1a2e/ffffff?text=Professional+Digital+Background') center/cover;
+            color: white;
+            padding: 8rem 0;
+            border-radius: 0 0 15px 15px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .icon-square {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .footer-dark {
+            background-color: #212529; 
+            color: #adb5bd;
+            padding: 3rem 0;
+        }
+        .page-header-small {
+            background-color: #343a40; 
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .service-feature {
+            border-left: 5px solid #ffc107; /* Warning color accent */
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navbar Component (Remixed for Dark/Professional Look) -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 text-warning" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear-wide-connected me-2" viewBox="0 0 16 16">
+                    <path d="M7.375 2.126c.055-.069.13-.112.21-.132.08-.02.163-.027.245-.008.175.04.316.174.373.344.2.56.126 1.05-.246 1.488l-.94 1.175c-.38.475-.494 1.137-.306 1.706.188.57.564 1.054 1.077 1.342.148.083.27.19.37.318l1.378 1.722c.262.328.636.564 1.07.652.434.089.89-.006 1.286-.275.405.282.686.714.739-1.2.046-.41-.07-.822-.32-1.157L12.54 8.54a.75.75 0 0 1 .184-.666c.21-.205.474-.35.772-.416.51-.115 1.036-.076 1.517.166.438.216.786.58.98 1.03a1.75 1.75 0 0 1-.225 1.834L14.72 11.23c-.34.34-.7.668-1.07.973-.42.348-.82.684-1.22.96-.34.23-.7.394-1.09.473-.388.077-.786.064-1.17-.03-1.09-.27-2.06-1.02-2.735-1.928l-.208-.28c-.183.23-.398.44-.65.617-.468.324-1.026.516-1.614.577-.588.061-1.18-.016-1.74-.238-.56-.222-1.06-.57-1.487-1.026l-.94-1.175c-.38-.474-.494-1.137-.306-1.706.188-.57.564 1.054 1.077 1.342.148.083.27.19.37.318l1.378-1.722c.262-.328.636-.564 1.07-.652.434.089.89-.006 1.286.275.405.282.686.714.739 1.2.046.41-.07.822-.32 1.157L7.375 2.126zM13.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                </svg>
+                Harina
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about-services.html">About & Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-warning ms-lg-3 mt-2 mt-lg-0" href="contact.html">Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Header for About/Services -->
+        <header class="page-header-small text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">About Harina & Our Services</h1>
+                <p class="lead">Innovation, Integrity, and Impact: The foundation of our digital solutions.</p>
+            </div>
+        </header>
+
+        <!-- About Us Section -->
+        <section class="container py-5" id="about">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x400/343a40/ffffff?text=Modern+Office" class="img-fluid rounded-3 shadow-lg" alt="About Us">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3 text-primary">Who We Are</h2>
+                    <p class="fs-5 text-muted">Harina was founded on the principle that technology should be a driver of simplification, not complexity. We are a dedicated team of engineers, designers, and strategists committed to transforming business challenges into scalable, high-performing digital solutions.</p>
+                    <p>Our agile approach ensures rapid deployment and continuous feedback, guaranteeing that the final product not only meets your requirements but exceeds your expectations for quality and performance. We focus on long-term partnership, not just one-off projects.</p>
+                    <a href="#services" class="btn btn-primary btn-lg mt-3 rounded-pill">View Our Full Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="bg-light py-5" id="services">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2 text-dark">Our Service Offerings</h2>
+                <p class="text-center text-muted mb-5">Comprehensive digital services designed to move your business forward.</p>
+
+                <div class="row g-4">
+                    <!-- Service 1: Custom Development -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Custom Application Development</h3>
+                            <p class="text-muted small">From modernizing legacy systems to building new SaaS platforms, we handle the full lifecycle of software development with expertise in modern frameworks like React, Angular, and Django.</p>
+                            <span class="badge bg-primary rounded-pill">Web & Mobile</span>
+                        </div>
+                    </div>
+                    <!-- Service 2: Cloud Infrastructure -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Cloud & DevOps Integration</h3>
+                            <p class="text-muted small">Optimize costs and improve deployment speed with expert configuration of AWS, Azure, or GCP. We specialize in CI/CD pipelines and infrastructure-as-code (IaC).</p>
+                            <span class="badge bg-success rounded-pill">AWS/Azure/GCP</span>
+                        </div>
+                    </div>
+                    <!-- Service 3: Digital Strategy -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Digital Strategy & Consulting</h3>
+                            <p class="text-muted small">We help define your digital roadmap. Our consultants provide strategic guidance on technology adoption, market fit, and performance optimization to maximize ROI.</p>
+                            <span class="badge bg-warning text-dark rounded-pill">Strategic Planning</span>
+                        </div>
+                    </div>
+                    <!-- Service 4: UI/UX Design -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">User Experience (UX/UI) Design</h3>
+                            <p class="text-muted small">Designing beautiful, accessible, and intuitive interfaces. We use data-driven insights and user testing to create seamless and engaging user journeys.</p>
+                            <span class="badge bg-danger rounded-pill">Design & Testing</span>
+                        </div>
+                    </div>
+                    <!-- Service 5: Data Analytics -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Data Analytics & BI</h3>
+                            <p class="text-muted small">Transforming raw data into actionable intelligence. We implement dashboards, reporting systems, and machine learning models for predictive analysis.</p>
+                            <span class="badge bg-info text-dark rounded-pill">Data Science</span>
+                        </div>
+                    </div>
+                    <!-- Service 6: Security & Compliance -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Cybersecurity & Compliance</h3>
+                            <p class="text-muted small">Protecting your assets with robust security frameworks, penetration testing, and ensuring compliance with industry regulations (GDPR, HIPAA, etc.).</p>
+                            <span class="badge bg-secondary rounded-pill">Security First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Footer Section -->
+        <section class="container my-5 text-center">
+            <div class="p-5 rounded-3" style="background-color: #e9ecef;">
+                <h3 class="fw-bold mb-3">Ready to Start Your Project?</h3>
+                <p class="lead">Contact us today to schedule a free consultation and see how we can drive your digital transformation.</p>
+                <a href="contact.html" class="btn btn-warning btn-lg mt-3 rounded-pill">Contact Our Team</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. Footer Component (Consistent Dark Footer) -->
+    <footer class="footer-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white">Harina</h5>
+                    <p class="small">Driving digital innovation since 2023. Your partner in technology and growth.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-white-50">Home</a></li>
+                        <li><a href="about-services.html" class="text-decoration-none text-white-50">Our Services</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white">Contact Info</h5>
+                    <address class="small">
+                        123 Tech Avenue, Innovation City, 90210<br>
+                        Email: <a href="mailto:info@harina.com" class="text-decoration-none text-white-50">info@harina.com</a><br>
+                        Phone: (555) 123-4567
+                    </address>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small text-white-50">
+                &copy; 2024 Harina. All rights reserved. | Built with Bootstrap 5.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MANDATORY Bootstrap 5 CDN Link (JavaScript Bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>
