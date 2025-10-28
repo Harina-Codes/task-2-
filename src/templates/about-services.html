@@ -1,0 +1,97 @@
+{% extends "layouts/base.html" %}
+
+{% set title = "About & Services" %}
+{% set page = "about" %}
+
+{% block content %}
+        <!-- Page Header for About/Services -->
+        <header class="page-header-small text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">About {{ brandName }} & Our Services</h1>
+                <p class="lead">Innovation, Integrity, and Impact: The foundation of our digital solutions.</p>
+            </div>
+        </header>
+
+        <!-- About Us Section -->
+        <section class="container py-5" id="about">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x400/343a40/ffffff?text=Modern+Office" class="img-fluid rounded-3 shadow-lg" alt="About Us">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3 text-primary">Who We Are</h2>
+                    <p class="fs-5 text-muted">{{ brandName }} was founded on the principle that technology should be a driver of simplification, not complexity. We are a dedicated team of engineers, designers, and strategists committed to transforming business challenges into scalable, high-performing digital solutions.</p>
+                    <p>Our agile approach ensures rapid deployment and continuous feedback, guaranteeing that the final product not only meets your requirements but exceeds your expectations for quality and performance. We focus on long-term partnership, not just one-off projects.</p>
+                    <a href="#services" class="btn btn-primary btn-lg mt-3 rounded-pill">View Our Full Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="bg-light py-5" id="services">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2 text-dark">Our Service Offerings</h2>
+                <p class="text-center text-muted mb-5">Comprehensive digital services designed to move your business forward.</p>
+
+                <div class="row g-4">
+                    <!-- Service 1: Custom Development -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Custom Application Development</h3>
+                            <p class="text-muted small">From modernizing legacy systems to building new SaaS platforms, we handle the full lifecycle of software development with expertise in modern frameworks like React, Angular, and Django.</p>
+                            <span class="badge bg-primary rounded-pill">Web & Mobile</span>
+                        </div>
+                    </div>
+                    <!-- Service 2: Cloud Infrastructure -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Cloud & DevOps Integration</h3>
+                            <p class="text-muted small">Optimize costs and improve deployment speed with expert configuration of AWS, Azure, or GCP. We specialize in CI/CD pipelines and infrastructure-as-code (IaC).</p>
+                            <span class="badge bg-success rounded-pill">AWS/Azure/GCP</span>
+                        </div>
+                    </div>
+                    <!-- Service 3: Digital Strategy -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Digital Strategy & Consulting</h3>
+                            <p class="text-muted small">We help define your digital roadmap. Our consultants provide strategic guidance on technology adoption, market fit, and performance optimization to maximize ROI.</p>
+                            <span class="badge bg-warning text-dark rounded-pill">Strategic Planning</span>
+                        </div>
+                    </div>
+                    <!-- Service 4: UI/UX Design -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">User Experience (UX/UI) Design</h3>
+                            <p class="text-muted small">Designing beautiful, accessible, and intuitive interfaces. We use data-driven insights and user testing to create seamless and engaging user journeys.</p>
+                            <span class="badge bg-danger rounded-pill">Design & Testing</span>
+                        </div>
+                    </div>
+                    <!-- Service 5: Data Analytics -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Data Analytics & BI</h3>
+                            <p class="text-muted small">Transforming raw data into actionable intelligence. We implement dashboards, reporting systems, and machine learning models for predictive analysis.</p>
+                            <span class="badge bg-info text-dark rounded-pill">Data Science</span>
+                        </div>
+                    </div>
+                    <!-- Service 6: Security & Compliance -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100 p-4 service-feature">
+                            <h3 class="fs-5 fw-bold mb-2">Cybersecurity & Compliance</h3>
+                            <p class="text-muted small">Protecting your assets with robust security frameworks, penetration testing, and ensuring compliance with industry regulations (GDPR, HIPAA, etc.).</p>
+                            <span class="badge bg-secondary rounded-pill">Security First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Footer Section -->
+        <section class="container my-5 text-center">
+            <div class="p-5 rounded-3" style="background-color: #e9ecef;">
+                <h3 class="fw-bold mb-3">Ready to Start Your Project?</h3>
+                <p class="lead">Contact us today to schedule a free consultation and see how we can drive your digital transformation.</p>
+                <a href="contact.html" class="btn btn-warning btn-lg mt-3 rounded-pill">Contact Our Team</a>
+            </div>
+        </section>
+{% endblock %}
