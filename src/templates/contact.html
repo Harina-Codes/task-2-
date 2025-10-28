@@ -1,0 +1,136 @@
+{% extends "layouts/base.html" %}
+
+{% set title = "Contact Us" %}
+{% set page = "contact" %}
+
+{% block content %}
+        <!-- Page Header for Contact -->
+        <header class="page-header-small text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Let's Connect</h1>
+                <p class="lead">We're ready to discuss your next digital challenge.</p>
+            </div>
+        </header>
+
+        <!-- Contact Content Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center g-5">
+                
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="form-container">
+                        <h2 class="fw-bold mb-4 text-dark">Send us a Message</h2>
+                        <!-- Simple form with Bootstrap validation classes. action="#" prevents navigation on submit -->
+                        <form action="#" method="POST" class="needs-validation" novalidate>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control rounded-2" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control rounded-2" id="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your last name.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control rounded-2" id="email" placeholder="name@example.com" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject / Service Inquiry</label>
+                                <select class="form-select rounded-2" id="subject" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>Custom Software Development</option>
+                                    <option>Cloud & DevOps Consulting</option>
+                                    <option>UX/UI Design</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a subject.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control rounded-2" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter your message.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning btn-lg w-100 rounded-pill fw-bold">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info Panel -->
+                <div class="col-lg-4">
+                    <div class="p-4 bg-light h-100 rounded-3 contact-info-card">
+                        <h3 class="fw-bold mb-3 text-primary">Direct Contact</h3>
+                        <p class="text-muted">Reach out to us directly via phone or email for immediate assistance.</p>
+                        
+                        <ul class="list-unstyled mt-4">
+                            <li class="d-flex align-items-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill text-warning me-3" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                </svg>
+                                <span>123 Tech Avenue, Innovation City, 90210</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill text-warning me-3" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.518L0 4.697zm6.761 3.9L8 9.585l1.239-.788 5.803 3.518H1.777l5.803-3.518zM16 4.697v7.104l-5.803-3.518L16 4.697z"/>
+                                </svg>
+                                <span>{{ supportEmail }}</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill text-warning me-3" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.628.163l1.792 1.792c.11.108.196.25.263.4.154.33.265.731.325 1.157.06.425-.015.852-.224 1.25l-.299.587c.38.74.898 1.41 1.536 2.05s1.31 1.156 2.05 1.536l.587-.299c.398-.209.825-.284 1.25-.224.426.06.827.17 1.157.325.153.067.294.154.4.263l1.792 1.792a1.745 1.745 0 0 1 .163 2.628l-1.04 1.04a.5.5 0 0 1-.708 0l-1.04-1.04c-.11-.108-.25-.196-.4-.263-.33-.154-.731-.265-1.157-.325-.425-.06-.852.015-1.25.224l-.299.587c-.74.38-1.41.898-2.05 1.536s-1.156 1.31-1.536 2.05l-.587.299c-.398.209-.825.284-1.25.224-.426.06-.827.17-1.157-.325-.153-.067-.294-.154-.4-.263l-1.792-1.792a1.745 1.745 0 0 1-.163-2.628l1.04-1.04a.5.5 0 0 1 .708 0l1.04 1.04z"/>
+                                </svg>
+                                <span>{{ supportPhone }}</span>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="fw-bold mt-5 mb-3 text-primary">Location Map</h4>
+                        <!-- Placeholder for map (since actual embedded maps require external scripts/keys) -->
+                        <img src="https://placehold.co/400x200/ced4da/495057?text=Map+Placeholder" class="img-fluid rounded-3" alt="Office Location Map">
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+{% block scripts %}
+    <!-- Custom Script for Bootstrap Form Validation -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+          'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+    </script>
+{% endblock %}
